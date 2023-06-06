@@ -1,11 +1,11 @@
-public class BinaryTree {
-    public Node root;
+public class BinaryTreeTraining {
+    public NodeTraining root;
 
     public void NewNode(int data) {
-        root = NewNode(root, new Node(data));
+        root = NewNode(root, new NodeTraining(data));
     }
 
-    private Node NewNode(Node root, Node newData) {
+    private NodeTraining NewNode(NodeTraining root, NodeTraining newData) {
         if (root == null) {
             root = newData;
             return root;
@@ -18,7 +18,7 @@ public class BinaryTree {
         return root;
     }
 
-    public void inOrder(Node node) {
+    public void inOrder(NodeTraining node) {
         if (node != null) {
             inOrder(node.left);
             System.out.print(node.data + " ");
@@ -26,7 +26,7 @@ public class BinaryTree {
         }
     }
 
-    public void preOrder(Node node) {
+    public void preOrder(NodeTraining node) {
         if (node != null) {
             System.out.print(node.data + " ");
             preOrder(node.left);
@@ -34,7 +34,7 @@ public class BinaryTree {
         }
     }
 
-    public void postOrder(Node node) {
+    public void postOrder(NodeTraining node) {
         if (node != null) {
             postOrder(node.left);
             postOrder(node.right);
